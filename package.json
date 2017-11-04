@@ -1,0 +1,22 @@
+{
+  "name": "otoole_media",
+  "version": "0.0.1",
+  "description": "My own, personal, website. (to the tune of Personal Jesus)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Terry O",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "chalk": "^2.3.0",
+    "express": "^4.16.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "volleyball": "^1.4.1",
+    "webpack": "^3.8.1"
+  }
+}

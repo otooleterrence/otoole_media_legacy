@@ -1,0 +1,6 @@
+# Dependencies
+node_modules
+
+# Webpacked materials
+public/bundle.js
+public/bundle.js.map
