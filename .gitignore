@@ -1,6 +1,9 @@
 # Dependencies
 node_modules
+npm-debug.log
 
 # Webpacked materials
-public/bundle.js
-public/bundle.js.map
+dist/public/bundle.js
+dist/public/bundle.js.map
+dist/public/bundle.css
+dist/public/bundle.css.map
