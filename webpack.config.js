@@ -13,6 +13,8 @@ const config = {
     extensions: ['.js', '.jsx', '.json', '.scss', '.css', '*'],
     alias: {
       components: path.resolve(__dirname, 'app/components/'),
+      containers: path.resolve(__dirname, 'app/containers/'),
+      theme: path.resolve(__dirname, 'app/theme/'),
     }
   },
   module: {

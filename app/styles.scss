@@ -1,3 +1,9 @@
+@import '~theme/colors';
+
+*{
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Avenir Next';
   padding: 10px;
@@ -8,4 +14,10 @@ h1 {
   font-size: 100px;
   line-height: 90px;
   margin: 0px;
+  color: $text;
+}
+
+a{
+  color: $text;
+  text-decoration: none;
 }

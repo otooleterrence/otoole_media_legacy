@@ -1,0 +1,17 @@
+@import '~theme/colors';
+
+.item{
+  background-color: $light-gray;
+  width: 33.33%;
+  height: 150px;
+  padding: 10px;
+}
+
+.indexContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 15px;
+}

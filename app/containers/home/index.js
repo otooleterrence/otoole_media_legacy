@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import NavButt from 'components/NavButt';
+import Indexer from 'components/Indexer';
 
 import styles from './styles';
 
@@ -11,7 +12,7 @@ class homeContainer extends Component {
     super(props);
 
     this.state = {
-      projects: {},
+      projects: [],
       categories: [
         'dev',
         'art',
@@ -46,7 +47,7 @@ class homeContainer extends Component {
   }
 
   render() {
-    const {categories, colors} = this.state;
+    const {projects, categories, colors} = this.state;
     return (
       <div>
         <h1>o'toole.<br />media</h1>
@@ -62,6 +63,7 @@ class homeContainer extends Component {
             );
           })}
         </div>
+        <Indexer items={projects}/>
       </div>
     );
   }
