@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import NavButt from 'components/NavButt';
+
 import styles from './styles';
 
 class homeContainer extends Component {
@@ -39,14 +41,24 @@ class homeContainer extends Component {
     });
   }
 
+  clickButton(page) {
+    return () => console.log(`go to page /${page}`);
+  }
+
   render() {
+    const {categories, colors} = this.state;
     return (
       <div>
         <h1>o'toole.<br />media</h1>
         <div className={styles.categories} >
-          {this.state.categories.map((cat) => {
+          {categories.map((cat, index) => {
             return (
-              <div key={cat} className={styles.category}>{cat}</div>
+              <NavButt
+                label={cat}
+                color={colors[index]}
+                key={cat}
+                onClick={this.clickButton(cat)}
+              />
             );
           })}
         </div>

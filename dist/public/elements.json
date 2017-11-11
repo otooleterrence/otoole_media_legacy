@@ -15,7 +15,7 @@
         "github",
         "FSA"
       ],
-      "color": "#AAE860"
+      "color": "lime"
     },
     {
       "name": "Lanterns",
@@ -35,7 +35,7 @@
         "Stackathon",
         "FSA"
       ],
-      "color": "#413952"
+      "color": "purple"
     },
     {
       "name": "Wright Window",
@@ -53,7 +53,7 @@
         "renderman",
         "drawing"
       ],
-      "color": "#FF9D31"
+      "color": "orange"
     }
   ]
 }

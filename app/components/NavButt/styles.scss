@@ -1,0 +1,33 @@
+.label{
+  margin-right: 10px;
+  font-weight: 600;
+  &:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+
+.lime{
+  @extend .label;
+  &:hover{
+    color: #AAE860;
+    text-decoration: underline;
+  }
+}
+
+.purple{
+  @extend .label;
+  &:hover{
+    color: #413952;
+    text-decoration: underline;
+  }
+}
+
+.orange{
+  @extend .label;
+  &:hover{
+    color: #FF9D31;
+    text-decoration: underline;
+  }
+}
