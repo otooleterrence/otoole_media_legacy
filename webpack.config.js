@@ -1,6 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-// var InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
-// var path = require('path');
+var path = require('path');
 
 const config = {
   entry: './app',
@@ -11,7 +10,10 @@ const config = {
   context: __dirname,
   devtool: 'source-map',
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.scss', '.css', '*']
+    extensions: ['.js', '.jsx', '.json', '.scss', '.css', '*'],
+    alias: {
+      components: path.resolve(__dirname, 'app/components/'),
+    }
   },
   module: {
     rules: [
