@@ -1,9 +1,27 @@
 // only use colors from this file, then I can change them globally when necessary
 
+//feature colors
 $lime: #AAE860;
 $purple: #413952;
 $orange: #FF9D31;
+$yellow: #F4D556;
+$red: #A33D3D;
+$blue: #4D69A0;
 
-$text: #333333;
+// list of all colors, used for css generation
+$colors: (
+  lime: $lime,
+  purple: $purple,
+  orange: $orange,
+  yellow: $yellow,
+  red: $red,
+  blue: $blue,
+);
 
+//text colors
+
+//grays
+$white: #FFFFFF;
 $light-gray: #cccccc;
+$text: #333333;
+$black: #000000;

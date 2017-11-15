@@ -1,3 +1,17 @@
+@import '~theme/colors';
+
 .categories{
   display: flex;
+}
+
+.white{
+  background-color: $white;
+  transition: background-color 300ms ease-out;
+}
+
+@each $color, $hex in $colors{
+  .#{$color}{
+    background-color: $hex;
+    transition: background-color 300ms ease-out;
+  }
 }

@@ -9,27 +9,12 @@
   }
 }
 
-
-.lime{
-  @extend .label;
-  &:hover{
-    color: $lime;
-    text-decoration: underline;
-  }
-}
-
-.purple{
-  @extend .label;
-  &:hover{
-    color: $purple;
-    text-decoration: underline;
-  }
-}
-
-.orange{
-  @extend .label;
-  &:hover{
-    color: $orange;
-    text-decoration: underline;
+@each $color, $hex in $colors{
+  .#{$color}{
+    @extend .label;
+    &:hover{
+      color: $hex;
+      text-decoration: underline;
+    }
   }
 }

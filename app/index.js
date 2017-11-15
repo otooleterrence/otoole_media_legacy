@@ -8,7 +8,7 @@ import './styles';
 render(
   <Router>
     <div>
-      <Route exact={true} path="/" component={homeContainer} />
+      <Route path="/" component={homeContainer} />
     </div>
   </Router>,
   document.getElementById('appContainer')

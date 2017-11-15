@@ -1,9 +1,8 @@
 @import '~theme/colors';
 
 .item{
-  background-color: $light-gray;
   width: 33.33%;
-  height: 150px;
+  height: 300px;
   padding: 10px;
 }
 
@@ -14,4 +13,24 @@
   flex-wrap: wrap;
   flex-direction: row;
   margin-top: 15px;
+}
+
+.itemImg{
+  background-color: $white;
+  border: 2px solid $text;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+
+@each $color, $hex in $colors{
+  .#{$color}{
+    @extend .itemImg;
+
+    &:hover{
+      background-color: $hex;
+      transition: background-color 300ms;
+    }
+  }
 }

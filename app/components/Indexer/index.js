@@ -9,7 +9,9 @@ export default (props) => {
     <div className={styles.indexContainer}>
     {items.map((item, index) => (
         <div className={styles.item} key={`${index}-item.name`}>
-          {item.name}
+          <div className={styles[item.color]}>
+            {item.name}
+          </div>
         </div>
       ))
     }

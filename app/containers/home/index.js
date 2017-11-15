@@ -24,8 +24,8 @@ class homeContainer extends Component {
         'arch',
       ],
       colors: [],
+      color: 'white',
     };
-
   }
 
   componentDidMount() {
@@ -42,14 +42,19 @@ class homeContainer extends Component {
     });
   }
 
-  clickButton(page) {
-    return () => console.log(`go to page /${page}`);
+  clickButton(page, color) {
+    return () => {
+      this.setState({
+        color,
+      });
+      console.log(`go to page /${page}`);
+    };
   }
 
   render() {
-    const {projects, categories, colors} = this.state;
+    const {projects, categories, colors, color} = this.state;
     return (
-      <div>
+      <div className={styles[color]}>
         <h1>o'toole.<br />media</h1>
         <div className={styles.categories} >
           {categories.map((cat, index) => {
@@ -58,7 +63,7 @@ class homeContainer extends Component {
                 label={cat}
                 color={colors[index]}
                 key={cat}
-                onClick={this.clickButton(cat)}
+                onClick={this.clickButton(cat, colors[index] || 'white')}
               />
             );
           })}
