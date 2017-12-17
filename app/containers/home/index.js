@@ -71,6 +71,9 @@ class homeContainer extends Component {
             );
           })}
         </div>
+        <Link to="contact/me">
+          contact
+        </Link>
         <Indexer items={projects} />
       </div>
     );
