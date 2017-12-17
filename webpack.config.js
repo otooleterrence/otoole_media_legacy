@@ -14,6 +14,7 @@ const config = {
     alias: {
       components: path.resolve(__dirname, 'app/components/'),
       containers: path.resolve(__dirname, 'app/containers/'),
+      store: path.resolve(__dirname, 'app/store/'),
       theme: path.resolve(__dirname, 'app/theme/'),
     }
   },

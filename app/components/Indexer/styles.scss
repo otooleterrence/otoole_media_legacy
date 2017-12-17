@@ -2,8 +2,13 @@
 
 .item{
   width: 33.33%;
-  height: 300px;
+  height: 332px;
   padding: 10px;
+}
+
+.image{
+  width: auto;
+  height: 100%;
 }
 
 .indexContainer{
@@ -16,21 +21,32 @@
 }
 
 .itemImg{
+  position: relative;
   background-color: $white;
-  border: 2px solid $text;
-  padding: 10px;
+  // border: 2px solid $text;
   height: 100%;
   width: 100%;
+  overflow: hidden;
+
 }
 
 
 @each $color, $hex in $colors{
   .#{$color}{
-    @extend .itemImg;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $hex;
+    padding: 10px;
 
     &:hover{
-      background-color: $hex;
-      transition: background-color 300ms;
+      opacity: .75;
     }
   }
 }

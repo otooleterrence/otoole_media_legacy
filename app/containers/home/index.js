@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
+import mapper from 'store/utils';
 
 import NavButt from 'components/NavButt';
 import Indexer from 'components/Indexer';
@@ -31,13 +34,11 @@ class homeContainer extends Component {
   componentDidMount() {
     axios.get('/elements.json')
     .then((res) => {
-      const projects = res.data.projects;
-      const categories = projects.map(project => project.type);
-      const colors = projects.map(project => project.color);
+      const map = mapper(res.data.projects);
+
       this.setState({
-        projects,
-        // categories,
-        colors,
+        projects: map.projects,
+        colors: map.colors,
       });
     });
   }
@@ -55,7 +56,9 @@ class homeContainer extends Component {
     const {projects, categories, colors, color} = this.state;
     return (
       <div className={styles[color]}>
-        <h1>o'toole.<br />media</h1>
+        <Link to="/">
+          <h1>o'toole.<br />media</h1>
+        </Link>
         <div className={styles.categories} >
           {categories.map((cat, index) => {
             return (
@@ -68,7 +71,7 @@ class homeContainer extends Component {
             );
           })}
         </div>
-        <Indexer items={projects}/>
+        <Indexer items={projects} />
       </div>
     );
   }

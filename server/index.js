@@ -20,6 +20,8 @@ app.get('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
+// app.get('/images', (_, res) => res.sendFile(path.resolve(__dirname, '..', 'dist', 'public', 'images')));
+
 // Send index.html for anything else.
 app.get('/*', (_, res) => res.sendFile(path.resolve(__dirname, '..', 'dist', 'index.html')));
 

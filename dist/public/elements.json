@@ -1,7 +1,8 @@
 {
   "projects": [
     {
-      "name": "Pair.it",
+      "name": "pair-it",
+      "title": "Pair.it",
       "type": [
         "code",
         "dev",
@@ -18,7 +19,8 @@
       "color": "lime"
     },
     {
-      "name": "Lanterns",
+      "name": "lanterns",
+      "title": "Lanterns",
       "type": [
         "three.js",
         "art",
@@ -38,7 +40,8 @@
       "color": "purple"
     },
     {
-      "name": "Wright Window",
+      "name": "wright-window",
+      "title": "Wright Window",
       "type": [
         "render",
         "arch",
@@ -56,7 +59,8 @@
       "color": "orange"
     },
     {
-      "name": "Wright Window",
+      "name": "wright-window",
+      "title": "Wright Window",
       "type": [
         "render",
         "arch",
@@ -74,7 +78,8 @@
       "color": "yellow"
     },
     {
-      "name": "Wright Window",
+      "name": "wright-window",
+      "title": "Wright Window",
       "type": [
         "render",
         "arch",
@@ -92,7 +97,8 @@
       "color": "red"
     },
     {
-      "name": "Wright Window",
+      "name": "wright-window",
+      "title": "Wright Window",
       "type": [
         "render",
         "arch",

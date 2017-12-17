@@ -9,9 +9,15 @@ export default (props) => {
     <div className={styles.indexContainer}>
     {items.map((item, index) => (
         <div className={styles.item} key={`${index}-item.name`}>
-          <div className={styles[item.color]}>
-            {item.name}
-          </div>
+          <Link to={`/${item.name}`} >
+            <div className={styles.itemImg}>
+              <div className={styles[item.color]}>
+                <h3>{item.title}</h3>
+                {item.description}
+              </div>
+              <img className={styles.image} src={item.thumbnailLink} />
+            </div>
+          </Link>
         </div>
       ))
     }
