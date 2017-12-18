@@ -1,64 +1,46 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
-// import NavButt from 'components/NavButt';
-// import Indexer from 'components/Indexer';
+import store from 'store';
 
-// import styles from './styles';
+import ImageProject from 'components/ImageProject';
+import TitleBlock from 'components/TitleBlock';
+
+import styles from './styles';
+import def from '../home/index';
 
 class projectContainer extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      projects: [],
-      categories: [
-        'dev',
-        'art',
-        'code',
-        'ux',
-        '3d',
-        'game',
-        'motion',
-        'arch',
-      ],
-      colors: [],
-      color: 'white',
-    };
+  typeCast(project) {
+    switch (project.type) {
+      case 'still':
+        return (<ImageProject project={project} />);
+        break;
+      case 'three':
+        return (<ThreeProject project={project} />);
+        break;
+      case 'dev':
+        return (<DevProject project={project} />);
+        break;
+      default:
+        return (<Redirect to="/" />);
+        break;
+    }
   }
 
-  // componentDidMount() {
-  //   axios.get('/elements.json')
-  //     .then((res) => {
-  //       const map = mapper(res.data.projects);
-
-  //       this.setState({
-  //         projects: map.projects,
-  //         colors: map.colors,
-  //       });
-  //     });
-  // }
-
-  // clickButton(page, color) {
-  //   return () => {
-  //     this.setState({
-  //       color,
-  //     });
-  //     console.log(`go to page /${page}`);
-  //   };
-  // }
-
   render() {
-    const project = this.props.match.params.projectName;
-    console.log('projectName', project);
+    const { projectName } = this.props.match.params;
+    let project = {};
+    store.projects.forEach( p => {
+      if (p.name === projectName) {
+        project = p;
+      }
+    });
     return (
       <div>
-        <Link to="/">
-          <h1>o'toole.<br />media</h1>
-        </Link>
-
-        {project}
+        <TitleBlock />
+        {this.typeCast(project)}
+        {/* <DescriptionBlock /> */}
       </div>
     );
   }

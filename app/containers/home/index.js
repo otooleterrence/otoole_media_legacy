@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import mapper from 'store/utils';
+import store from 'store';
 
 import NavButt from 'components/NavButt';
 import Indexer from 'components/Indexer';
@@ -15,7 +15,7 @@ class homeContainer extends Component {
     super(props);
 
     this.state = {
-      projects: [],
+      projects: store.projects,
       categories: [
         'dev',
         'art',
@@ -26,22 +26,17 @@ class homeContainer extends Component {
         'motion',
         'arch',
       ],
-      colors: [],
+      colors: store.colors,
       color: 'white',
     };
   }
 
-  componentDidMount() {
-    axios.get('/elements.json')
-    .then((res) => {
-      const map = mapper(res.data.projects);
-
-      this.setState({
-        projects: map.projects,
-        colors: map.colors,
-      });
-    });
-  }
+  // componentDidMount() {
+  //   this.setState({
+  //     projects: store.projects,
+  //     colors: store.colors,
+  //   });
+  // }
 
   clickButton(page, color) {
     return () => {

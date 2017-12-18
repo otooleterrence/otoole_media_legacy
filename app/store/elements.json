@@ -1,0 +1,59 @@
+{
+  "projects": [
+    {
+      "name": "pair-it",
+      "title": "Pair.it",
+      "type": "dev",
+      "description": "a GitHub enabled Pair-programming app",
+      "link": "http://www.pair-it.herokuapp.com",
+      "tags": [
+        "electron",
+        "javascript",
+        "github",
+        "FSA",
+        "code",
+        "dev",
+        "ux"
+      ],
+      "color": "lime"
+    },
+    {
+      "name": "lanterns",
+      "title": "Lanterns",
+      "type": "three",
+      "description": "meditation and interaction",
+      "link": "https://github.com/otooleterrence/lanterns",
+      "tags": [
+        "javascript",
+        "three.js",
+        "Stackathon",
+        "FSA",
+        "three.js",
+        "art",
+        "dev",
+        "code",
+        "motion",
+        "3d"
+      ],
+      "color": "purple"
+    },
+    {
+      "name": "wright-window",
+      "title": "Wright Window",
+      "type": "still",
+      "description": "not a GitHub enabled Pair-programming app",
+      "link": "https://github.com/otooleterrence/lanterns",
+      "tags": [
+        "maya",
+        "3d",
+        "renderman",
+        "drawing",
+        "render",
+        "arch",
+        "game",
+        "art"
+      ],
+      "color": "orange"
+    }
+  ]
+}
