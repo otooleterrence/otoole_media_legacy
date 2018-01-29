@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/lov3zvv.css");
 @import '~theme/colors';
 
 *{
@@ -5,16 +6,18 @@
 }
 
 body {
-  font-family: 'Avenir Next';
+  font-family: 'Proxima Nova';
   padding: 10px;
 }
 
 
 h1 {
-  font-size: 100px;
-  line-height: 90px;
+  font-size: 36px;
+  font-variant: light;
   margin: 0px;
+  text-transform: uppercase;
   color: $text;
+  letter-spacing: 5px;
 }
 
 a{

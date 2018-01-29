@@ -52,7 +52,7 @@ class homeContainer extends Component {
     return (
       <div className={styles[color]}>
         <Link to="/">
-          <h1>o'toole.<br />media</h1>
+          <h1>o'toole.media</h1>
         </Link>
         <div className={styles.categories} >
           {categories.map((cat, index) => {
