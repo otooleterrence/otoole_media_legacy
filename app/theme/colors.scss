@@ -8,6 +8,16 @@ $yellow: #F4D556;
 $red: #A33D3D;
 $blue: #4D69A0;
 
+//text colors
+
+//grays
+$white: #FFFFFF;
+$bg-gray: #eeeeee;
+$light-gray: #cccccc;
+$text: #333333;
+$black: #000000;
+
+
 // list of all colors, used for css generation
 $colors: (
   lime: $lime,
@@ -16,13 +26,9 @@ $colors: (
   yellow: $yellow,
   red: $red,
   blue: $blue,
+  light-gray: $light-gray,
+  white:$white,
 );
 
-//text colors
+$limeGradient: linear-gradient(to bottom, $lime 0%, $yellow 100%);
 
-//grays
-$white: #FFFFFF;
-$light-gray: #cccccc;
-$bg-gray: #eeeeee;
-$text: #333333;
-$black: #000000;

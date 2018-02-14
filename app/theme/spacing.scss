@@ -1,0 +1,13 @@
+// break points for measuring and sizing
+
+$s: 150px;
+$m: 500px;
+$l: 850px;
+$xl: 1200px;
+
+.xl-container{
+  width: $xl;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+}

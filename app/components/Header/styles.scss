@@ -1,0 +1,25 @@
+@import '~theme/colors';
+@import '~theme/spacing';
+
+.header {
+  align-items: center;
+  background-color: $text;
+  display: flex;
+  color: $white;
+  height: 100px;
+  width: 100%;
+}
+
+.links{
+  color: $white;
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.container{
+  align-items: center;
+  width: $xl;
+  margin: 0px auto;
+  justify-content: space-between;
+  display: flex;
+}

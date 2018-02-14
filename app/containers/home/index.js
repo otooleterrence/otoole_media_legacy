@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 import store from 'store';
 
-import NavButt from 'components/NavButt';
-import Indexer from 'components/Indexer';
+import Header from 'components/Header';
+import ProjectCard from 'components/ProjectCard';
 
 import styles from './styles';
 
@@ -31,19 +30,12 @@ class homeContainer extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.setState({
-  //     projects: store.projects,
-  //     colors: store.colors,
-  //   });
-  // }
 
-  clickButton(page, color) {
+  setColor(color) {
     return () => {
       this.setState({
         color,
       });
-      console.log(`go to page /${page}`);
     };
   }
 
@@ -51,25 +43,13 @@ class homeContainer extends Component {
     const {projects, categories, colors, color} = this.state;
     return (
       <div className={styles[color]}>
-        <Link to="/">
-          <h1>o'toole.media</h1>
-        </Link>
-        <div className={styles.categories} >
-          {categories.map((cat, index) => {
-            return (
-              <NavButt
-                label={cat}
-                color={colors[index]}
-                key={cat}
-                onClick={this.clickButton(cat, colors[index] || 'white')}
-              />
-            );
-          })}
+        <Header onHover={() => this.setColor('white')} />
+        <div className={styles['xl-container']}>
+          <ProjectCard projectName={'Little Things'} onHover={() => this.setColor('yellow')} />
+          <ProjectCard projectName={'Pair.it'} onHover={() => this.setColor('lime')} />
+          <ProjectCard projectName={'Three.js Talk'} onHover={() => this.setColor('red')} />
+          <ProjectCard projectName={'Renderings and Drawings'} onHover={() => this.setColor('orange')} />
         </div>
-        <Link to="contact/me">
-          contact
-        </Link>
-        <Indexer items={projects} />
       </div>
     );
   }

@@ -22,9 +22,8 @@ render(
   <Router>
     <div>
       <Route exact path="/" component={homeContainer} />
-      <Route path="/contact/me" component={homeContainer} />
-      <Route path="/about/me" component={homeContainer} />
-      <Route exact path="/:projectName" component={projectContainer} />
+      <Route path="/contact" component={homeContainer} />
+      <Route path="/about" component={homeContainer} />
     </div>
   </Router>,
   document.getElementById('appContainer')

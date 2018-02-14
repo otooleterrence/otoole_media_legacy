@@ -1,4 +1,5 @@
 @import '~theme/colors';
+@import '~theme/spacing';
 
 .categories{
   display: flex;
@@ -12,6 +13,14 @@
 @each $color, $hex in $colors{
   .#{$color}{
     background-color: $hex;
-    transition: background-color 300ms ease-out;
+    transition: background-color 500ms ease-out;
+    min-height: 1000px;
+    width: 100%;
   }
+}
+
+.thing{
+  background-color: $blue;
+  width: 100px;
+  height: 300px;
 }
