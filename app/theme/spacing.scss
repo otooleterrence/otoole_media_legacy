@@ -6,8 +6,9 @@ $l: 850px;
 $xl: 1200px;
 
 .xl-container{
-  width: $xl;
-  margin: 0px auto;
+  width: 100%;
+  max-width: $xl;
   display: flex;
   flex-direction: column;
+  padding: 0px 15px;
 }

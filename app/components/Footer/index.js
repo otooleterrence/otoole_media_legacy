@@ -3,13 +3,10 @@ import { Link } from 'react-router-dom';
 
 import styles from './styles';
 
-export default (props) => {
+export default () => {
   return (
-    <header className={styles.header}>
-      <nav className={styles.container} onMouseEnter={props.onHover()}>
-        <Link to="/">
-          <h1>otoole.media</h1>
-        </Link>
+    <footer className={styles.footer}>
+      <nav className={styles.container}>
         <div>
           <Link to="/about" className={styles.links}>
             about
@@ -18,7 +15,8 @@ export default (props) => {
             contact
           </Link>
         </div>
+        <div>Designed and built by Terry, 2018.</div>
       </nav>
-    </header>
+    </footer>
   );
 };

@@ -12,7 +12,10 @@
 
 @each $color, $hex in $colors{
   .#{$color}{
+    align-items: center;
+    display: flex;
     background-color: $hex;
+    flex-direction: column;
     transition: background-color 500ms ease-out;
     min-height: 1000px;
     width: 100%;

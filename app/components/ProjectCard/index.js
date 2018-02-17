@@ -6,10 +6,14 @@ import styles from './styles';
 export default (props) => {
   const { projectName, onHover } = props;
 
+  console.log('props', props);
+
   return (
-    <div className={styles.cardContainer}>
+    <section className={styles.cardContainer}>
       <h2>{projectName}</h2>
-      <div className={styles.card} onMouseEnter={onHover()} />
-    </div>
+      <div className={styles.card} onMouseEnter={onHover()}>
+        {props.children}
+      </div>
+    </section>
   );
 };
