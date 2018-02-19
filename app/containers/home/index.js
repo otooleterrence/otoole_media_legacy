@@ -7,6 +7,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import ProjectCard from 'components/ProjectCard';
 import CardPairIt from 'components/CardPairit';
+import CardLittleThings from 'components/CardLittleThings';
 
 import styles from './styles';
 
@@ -50,7 +51,7 @@ class homeContainer extends Component {
         <Header onHover={() => this.setColor('bg-gray')} />
         <article className={styles['xl-container']}>
           <ProjectCard projectName={'Little Things'} onHover={() => this.setColor('yellow')}>
-            <CardPairIt />
+            <CardLittleThings />
           </ProjectCard>
           <ProjectCard projectName={'Pair.it'} onHover={() => this.setColor('lime')}>
             <CardPairIt />
