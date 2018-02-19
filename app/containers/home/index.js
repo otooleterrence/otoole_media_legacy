@@ -8,6 +8,7 @@ import Footer from 'components/Footer';
 import ProjectCard from 'components/ProjectCard';
 import CardPairIt from 'components/CardPairit';
 import CardLittleThings from 'components/CardLittleThings';
+import CardThreeTalk from 'components/CardThreeTalk';
 
 import styles from './styles';
 
@@ -56,8 +57,8 @@ class homeContainer extends Component {
           <ProjectCard projectName={'Pair.it'} onHover={() => this.setColor('lime')}>
             <CardPairIt />
           </ProjectCard>
-          <ProjectCard projectName={'Three.js Talk'} onHover={() => this.setColor('red')}>
-            <CardPairIt />
+          <ProjectCard projectName={'Essential Three.js'} onHover={() => this.setColor('red')}>
+            <CardThreeTalk />
           </ProjectCard>
           <ProjectCard projectName={'Renderings and Drawings'} onHover={() => this.setColor('orange')}>
             <CardPairIt />

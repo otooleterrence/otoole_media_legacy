@@ -1,5 +1,6 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
+import YouTube from 'react-youtube';
 import BitLink from 'components/BitLink';
 import styles from './styles';
 
@@ -17,13 +18,10 @@ export default (props) => {
         <BitLink className={styles.link} linkTo="/contact" linkName={'Pairit'} />
       </div>
       <div className={styles.twoThirds} >
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/sQqvEzpkZys"
-          frameBorder= "0"
-        >
-        </iframe>
+        <YouTube
+          videoId="sQqvEzpkZys"
+          className={styles.video}
+        />
       </div>
     </div>
 
