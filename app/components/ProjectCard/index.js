@@ -6,8 +6,6 @@ import styles from './styles';
 export default (props) => {
   const { projectName, onHover } = props;
 
-  console.log('props', props);
-
   return (
     <section className={styles.cardContainer}>
       <h2>{projectName}</h2>

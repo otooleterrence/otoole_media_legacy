@@ -1,10 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import { render } from 'react-dom';
+import ReactGA from 'react-ga';
 import homeContainer from './containers/home';
-import projectContainer from './containers/project';
+import createHistory from 'history/createBrowserHistory';
 
 import './styles';
+
+ReactGA.initialize('UA-114600202-1'); //Unique Google Analytics tracking number
+
+const history = createHistory();
+history.listen((location, action) => {
+  console.log('page change', location);
+  ReactGA.set({ page: location.pathname });
+  ReactGA.pageview(location.pathname);
+});
 
 /**
  * For cleanliness the only url param will be to find a project page
@@ -19,7 +29,7 @@ import './styles';
  */
 
 render(
-  <Router>
+  <Router history={history}>
     <div>
       <Route exact path="/" component={homeContainer} />
       <Route path="/contact" component={homeContainer} />
