@@ -19,9 +19,9 @@ export default () => {
         <div className={styles.text} >
           <p>A GitHub-enabled remote pair programming application. Pair.it is a desktop app that uses Electron, react-redux, socket.io, WebRTC and other libraries to simplify remote collaboration. </p>
         </div>
-        <BitLink className={styles.link} linkTo="/contact" linkName={'GitHub'} />
-        <BitLink className={styles.link} linkTo="/contact" linkName={'Pair It'} />
-        <BitLink className={styles.link} linkTo="/contact" linkName={'Fullstack'} />
+        <BitLink className={styles.link} linkTo="https://github.com/jjdeehan/pair-it-app" icon={'github'} linkName={'View on GitHub'} />
+        <BitLink className={styles.link} linkTo="http://pair-it.herokuapp.com/" icon={'pairIt'} linkName={'Download Pair It'} />
+        <BitLink className={styles.link} linkTo="https://www.fullstackacademy.com/" icon={'fullStack'} linkName={'Fullstack'} />
         <BitLink className={styles.link} linkTo="/contact" linkName={'Pairit'} />
       </div>
       <div className={styles.twoThirds} >
