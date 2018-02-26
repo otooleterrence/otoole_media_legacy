@@ -4,10 +4,11 @@ import { render } from 'react-dom';
 import ReactGA from 'react-ga';
 import homeContainer from './containers/home';
 import createHistory from 'history/createBrowserHistory';
+import { gaId } from 'config';
 
 import './styles';
 
-ReactGA.initialize('UA-114600202-1'); // initialize google analytics
+ReactGA.initialize(gaId); // initialize google analytics
 ReactGA.pageview(window.location.pathname);
 
 const history = createHistory(); // must use history and listener for ga

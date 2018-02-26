@@ -16,6 +16,7 @@ const config = {
       containers: path.resolve(__dirname, 'app/containers/'),
       store: path.resolve(__dirname, 'app/store/'),
       theme: path.resolve(__dirname, 'app/theme/'),
+      config: path.resolve(__dirname, 'config'),
     }
   },
   module: {
