@@ -1,9 +1,16 @@
 import React from 'react';
+import { OutboundLink, event } from 'react-ga';
 // import { Link } from 'react-router-dom';
 import BitLink from 'components/BitLink';
 import styles from './styles';
 
-export default (props) => {
+export default () => {
+  const handleClick = () => {
+    event({
+      category: 'testing',
+      action: 'clicked test button'
+    });
+  };
 
   return (
     <div className={styles.row}>
@@ -12,7 +19,13 @@ export default (props) => {
           <p>Sometimes the world begs to be represented. Sometimes it's cute, sometimes it's dumb, sometimes it's remarkable, sometimes it's exceedingly ordinary. All of these little things add up to make a modern life.</p>
         </div>
         <div className={styles.link} >
-        first wrongle
+          <button onClick={handleClick} >log some event </button>
+          <OutboundLink
+            eventLabel="Outbound to example"
+            to="http://www.example.com"
+            target="_blank">
+            My Link
+          </OutboundLink>
         </div>
         <div className={styles.link} >
         second wrongle

@@ -7,12 +7,11 @@ import createHistory from 'history/createBrowserHistory';
 
 import './styles';
 
-ReactGA.initialize('UA-114600202-1'); //Unique Google Analytics tracking number
+ReactGA.initialize('UA-114600202-1'); // initialize google analytics
+ReactGA.pageview(window.location.pathname);
 
-const history = createHistory();
-history.listen((location, action) => {
-  console.log('page change', location);
-  ReactGA.set({ page: location.pathname });
+const history = createHistory(); // must use history and listener for ga
+history.listen((location) => {
   ReactGA.pageview(location.pathname);
 });
 
@@ -21,8 +20,6 @@ history.listen((location, action) => {
  *    e.g. otoole.media/lanterns
  *         otoole.media/pair-it
  *         otoole.media/wright-window
- * More specific pages like for contact or about can be more complex
- *    e.g. otoole.media/contace/me
  * home will be the standard '/'
  *    e.g. otoole.media
  * project pages should really just focus on the media, not on the interface

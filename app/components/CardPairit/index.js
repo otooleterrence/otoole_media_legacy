@@ -1,10 +1,17 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { event } from 'react-ga';
 import YouTube from 'react-youtube';
 import BitLink from 'components/BitLink';
 import styles from './styles';
 
-export default (props) => {
+export default () => {
+
+  const handlePlay = () => {
+    event({
+      category: 'video',
+      action: 'played Pair.it video',
+    });
+  };
 
   return (
     <div className={styles.row}>
@@ -21,6 +28,7 @@ export default (props) => {
         <YouTube
           videoId="sQqvEzpkZys"
           className={styles.video}
+          onPlay={handlePlay}
         />
       </div>
     </div>

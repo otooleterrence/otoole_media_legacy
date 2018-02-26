@@ -1,10 +1,17 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { event } from 'react-ga';
 import YouTube from 'react-youtube';
 import BitLink from 'components/BitLink';
 import styles from './styles';
 
-export default (props) => {
+export default () => {
+
+  const handlePlay = () => {
+    event({
+      category: 'video',
+      action: 'played Three.js video',
+    });
+  };
 
   return (
     <div className={styles.row}>
@@ -21,14 +28,8 @@ export default (props) => {
         <YouTube
           videoId= "O18Dq-QcfEE"
           className= {styles.video}
+          onPlay= {handlePlay}
         />
-        {/* <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/O18Dq-QcfEE"
-          frameBorder="0"
-        >
-        </iframe> */}
       </div>
     </div>
 
