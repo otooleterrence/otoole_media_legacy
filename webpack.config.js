@@ -14,9 +14,10 @@ const config = {
     alias: {
       components: path.resolve(__dirname, 'app/components/'),
       containers: path.resolve(__dirname, 'app/containers/'),
+      config: path.resolve(__dirname, 'app/config'),
+      icons: path.resolve(__dirname, 'app/icons'),
       store: path.resolve(__dirname, 'app/store/'),
       theme: path.resolve(__dirname, 'app/theme/'),
-      config: path.resolve(__dirname, 'app/config'),
     }
   },
   module: {
@@ -47,7 +48,11 @@ const config = {
       },
       {
         test: /\.svg$/,
-        loader: 'svg-loader',
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          mimetype: 'image/svg+xml',
+        }
       }
     ]
   },
