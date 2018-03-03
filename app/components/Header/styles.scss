@@ -3,7 +3,7 @@
 
 .header {
   align-items: center;
-  background-color: $text;
+  // background-color: $text;
   padding: 0px 15px;
   display: flex;
   color: $white;
@@ -26,4 +26,18 @@
   margin: 0px auto;
   justify-content: space-between;
   display: flex;
+}
+
+.image{
+  // display: block;
+  height: 30px;
+  width: 30px;
+  fill: $white;
+  margin-left: 15px;
+}
+
+.mailLink{
+  color: $white;
+  font-size: 44px;
+  font-weight: 100;
 }

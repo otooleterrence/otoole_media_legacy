@@ -15,6 +15,7 @@ $white: #FFFFFF;
 $bg-gray: #eeeeee;
 $light-gray: #cccccc;
 $text: #333333;
+$near-black: #181818;
 $black: #000000;
 
 
@@ -30,6 +31,8 @@ $colors: (
   white:$white,
   bg-gray: $bg-gray,
   dark-gray: $text,
+  black: $black,
+  near-black: $near-black
 );
 
 $limeGradient: linear-gradient(to bottom, $lime 0%, $yellow 100%);

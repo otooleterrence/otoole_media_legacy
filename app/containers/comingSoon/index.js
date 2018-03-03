@@ -26,7 +26,7 @@ class homeContainer extends Component {
 
     // TODO: main cannot rerender the entire page when the color changes
     return (
-      <main className={styles['dark-gray']}>
+      <main className={styles['near-black']}>
         <Header />
         <Lottie
           options={defaultOptions}
