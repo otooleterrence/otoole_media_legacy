@@ -22,7 +22,7 @@ export default () => {
         <BitLink className={styles.link} linkTo="https://github.com/jjdeehan/pair-it-app" icon={'github'} linkName={'View on GitHub'} />
         <BitLink className={styles.link} linkTo="http://pair-it.herokuapp.com/" icon={'pairIt'} linkName={'Download Pair It'} />
         <BitLink className={styles.link} linkTo="https://www.fullstackacademy.com/" icon={'fullStack'} linkName={'Fullstack'} />
-        <BitLink className={styles.link} linkTo="/contact" linkName={'Pairit'} />
+        <BitLink className={styles.link} linkTo="/contact" linkName={'More'} />
       </div>
       <div className={styles.twoThirds} >
         <YouTube

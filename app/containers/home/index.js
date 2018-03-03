@@ -30,7 +30,7 @@ class homeContainer extends Component {
         'arch',
       ],
       colors: store.colors,
-      color: 'bg-gray',
+      color: 'white',
     };
   }
 
