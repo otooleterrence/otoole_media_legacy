@@ -3,6 +3,7 @@ import { Router, Route } from 'react-router-dom';
 import { render } from 'react-dom';
 import ReactGA from 'react-ga';
 import homeContainer from './containers/home';
+import comingSoon from './containers/comingSoon';
 import createHistory from 'history/createBrowserHistory';
 import { gaId } from 'config';
 
@@ -30,8 +31,9 @@ render(
   <Router history={history}>
     <div>
       <Route exact path="/" component={homeContainer} />
-      <Route path="/contact" component={homeContainer} />
-      <Route path="/about" component={homeContainer} />
+      <Route exact path="/coming-soon" component={comingSoon} />
+      {/* <Route path="/contact" component={homeContainer} />
+      <Route path="/about" component={homeContainer} /> */}
     </div>
   </Router>,
   document.getElementById('appContainer')

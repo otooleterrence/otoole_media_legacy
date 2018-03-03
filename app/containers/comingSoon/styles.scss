@@ -1,0 +1,29 @@
+@import '~theme/colors';
+@import '~theme/spacing';
+
+.categories{
+  display: flex;
+}
+
+.white{
+  background-color: $white;
+  transition: background-color 300ms ease-out;
+}
+
+@each $color, $hex in $colors{
+  .#{$color}{
+    align-items: center;
+    display: flex;
+    background-color: $hex;
+    flex-direction: column;
+    transition: background-color 500ms ease-out;
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+.thing{
+  background-color: $blue;
+  width: 100px;
+  height: 300px;
+}

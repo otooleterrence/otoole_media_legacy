@@ -6,19 +6,19 @@ import styles from './styles';
 export default (props) => {
   return (
     <header className={styles.header}>
-      <nav className={styles.container} onMouseEnter={props.onHover()}>
+      {/* <nav className={styles.container} > */}
         <Link to="/">
           <h1>otoole.media</h1>
         </Link>
         <div>
-          <Link to="/about" className={styles.links}>
-            about
-          </Link>
-          <Link to="/contact" className={styles.links}>
-            contact
-          </Link>
+          {/* <Link to="/contact" className={styles.links}>
+            <h1>@</h1>
+          </Link> */}
+          <a href="mailto:terry@otoole.media">
+            <h1>@</h1>
+          </a>
         </div>
-      </nav>
+      {/* </nav> */}
     </header>
   );
 };

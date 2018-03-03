@@ -9,6 +9,7 @@ body {
   font-family: 'proxima-nova', 'Open Sans';
   padding: 0px;
   margin: 0px;
+  background-color: $text;
 }
 
 
@@ -16,7 +17,7 @@ h1 {
   font-size: 44px;
   font-weight: 300;
   margin: 0px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   color: $white;
   letter-spacing: 5px;
 }
