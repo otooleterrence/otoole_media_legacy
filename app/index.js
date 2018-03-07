@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Redirect } from 'react-router-dom';
+import { Router, Route, Redirect, Switch } from 'react-router-dom';
 import { render } from 'react-dom';
 import ReactGA from 'react-ga';
 // import homeContainer from './containers/home';
@@ -29,17 +29,15 @@ history.listen((location) => {
 
 render(
   <Router history={history}>
-    <div>
+    <Switch>
       {/* <Route exact path="/" component={homeContainer} /> */}
       <Route exact path="/coming-soon" component={comingSoon} />
       {/* <Route path="/contact" component={homeContainer} />
       <Route path="/about" component={homeContainer} /> */}
-      <Route
-        exact
-        path="*"
-        render={() => (<Redirect to="/coming-soon" />)}
-      />
-    </div>
+      {/* <Route path="/*" render={() => ()} /> */}
+
+      <Redirect to="/coming-soon" />
+    </Switch>
   </Router>,
   document.getElementById('appContainer')
 );
