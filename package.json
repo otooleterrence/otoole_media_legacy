@@ -1,11 +1,24 @@
 {
   "name": "otoole_media",
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "env": {
+      "production": {
+        "presets": [
+          "minify"
+        ]
+      }
+    }
+  },
   "version": "0.0.1",
   "description": "My own, personal, website. (to the tune of Personal Jesus)",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
     "build-watch": "npm run build -- -w",
+    "build-prod": "BABEL_ENV=production npm run build",
     "start": "nodemon ./server && build-watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -36,6 +49,7 @@
     "webpack": "^3.8.1"
   },
   "devDependencies": {
+    "babel-preset-minify": "^0.3.0",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.6.0",
