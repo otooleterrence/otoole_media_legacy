@@ -3,7 +3,14 @@ node_modules
 npm-debug.log
 
 # Webpacked materials
-dist/public/bundle.js
-dist/public/bundle.js.map
-dist/public/bundle.css
-dist/public/bundle.css.map
+/dist/public/bundle.js
+/dist/public/bundle.js.map
+/dist/public/bundle.css
+/dist/public/bundle.css.map
+
+# images
+/dist/public/images
+
+# design and sketch files
+/design
+

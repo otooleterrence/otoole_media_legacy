@@ -1,25 +1,33 @@
 {
   "projects": [
     {
-      "name": "Pair.it",
-      "type": [
-        "code",
-        "dev",
-        "ux"
-      ],
+      "name": "pair-it",
+      "title": "Pair.it",
+      "type": "dev",
       "description": "a GitHub enabled Pair-programming app",
       "link": "http://www.pair-it.herokuapp.com",
       "tags": [
         "electron",
         "javascript",
         "github",
-        "FSA"
+        "FSA",
+        "code",
+        "dev",
+        "ux"
       ],
-      "color": "#AAE860"
+      "color": "lime"
     },
     {
-      "name": "Lanterns",
-      "type": [
+      "name": "lanterns",
+      "title": "Lanterns",
+      "type": "three",
+      "description": "meditation and interaction",
+      "link": "https://github.com/otooleterrence/lanterns",
+      "tags": [
+        "javascript",
+        "three.js",
+        "Stackathon",
+        "FSA",
         "three.js",
         "art",
         "dev",
@@ -27,18 +35,29 @@
         "motion",
         "3d"
       ],
-      "description": "meditation and interaction",
-      "link": "https://github.com/otooleterrence/lanterns",
-      "tags": [
-        "javascript",
-        "three.js",
-        "Stackathon",
-        "FSA"
-      ],
-      "color": "#413952"
+      "color": "purple"
     },
     {
-      "name": "Wright Window",
+      "name": "wright-window",
+      "title": "Wright Window",
+      "type": "still",
+      "description": "not a GitHub enabled Pair-programming app",
+      "link": "https://github.com/otooleterrence/lanterns",
+      "tags": [
+        "maya",
+        "3d",
+        "renderman",
+        "drawing",
+        "render",
+        "arch",
+        "game",
+        "art"
+      ],
+      "color": "orange"
+    },
+    {
+      "name": "wright-window",
+      "title": "Wright Window",
       "type": [
         "render",
         "arch",
@@ -53,7 +72,45 @@
         "renderman",
         "drawing"
       ],
-      "color": "#FF9D31"
+      "color": "yellow"
+    },
+    {
+      "name": "wright-window",
+      "title": "Wright Window",
+      "type": [
+        "render",
+        "arch",
+        "game",
+        "art"
+      ],
+      "description": "not a GitHub enabled Pair-programming app",
+      "link": "https://github.com/otooleterrence/lanterns",
+      "tags": [
+        "maya",
+        "3d",
+        "renderman",
+        "drawing"
+      ],
+      "color": "red"
+    },
+    {
+      "name": "wright-window",
+      "title": "Wright Window",
+      "type": [
+        "render",
+        "arch",
+        "game",
+        "art"
+      ],
+      "description": "not a GitHub enabled Pair-programming app",
+      "link": "https://github.com/otooleterrence/lanterns",
+      "tags": [
+        "maya",
+        "3d",
+        "renderman",
+        "drawing"
+      ],
+      "color": "blue"
     }
   ]
 }

@@ -1,0 +1,20 @@
+@import '~theme/colors';
+
+.label{
+  margin-right: 10px;
+  font-weight: 600;
+  &:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@each $color, $hex in $colors{
+  .#{$color}{
+    @extend .label;
+    &:hover{
+      color: $hex;
+      text-decoration: underline;
+    }
+  }
+}

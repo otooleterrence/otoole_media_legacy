@@ -1,4 +1,39 @@
+@import url("https://use.typekit.net/lov3zvv.css");
+@import '~theme/colors';
+
+*{
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Avenir';
-  padding: 10px;
+  font-family: 'proxima-nova', 'Open Sans';
+  padding: 0px;
+  margin: 0px;
+  background-color: $near-black;
+}
+
+
+h1 {
+  font-size: 44px;
+  font-weight: 100;
+  margin: 0px;
+  // text-transform: uppercase;
+  color: $white;
+  letter-spacing: 5px;
+}
+
+h2{
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: $text;
+  letter-spacing: 5px;
+  line-height: 40px;
+}
+
+a{
+  color: $text;
+  text-decoration: none;
 }

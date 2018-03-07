@@ -1,0 +1,17 @@
+@import '~theme/colors';
+
+.cardContainer{
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card{
+  width: 100%;
+  flex-grow: 1;
+  height: 560px;
+  display: flex;
+  background-color: $white;
+  // border: solid 2px $text;
+}

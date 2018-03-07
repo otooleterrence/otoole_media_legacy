@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
+
+import store from 'store';
+
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import ProjectCard from 'components/ProjectCard';
+import CardPairIt from 'components/CardPairit';
+import CardLittleThings from 'components/CardLittleThings';
+import CardThreeTalk from 'components/CardThreeTalk';
 
 import styles from './styles';
 
@@ -9,7 +18,7 @@ class homeContainer extends Component {
     super(props);
 
     this.state = {
-      projects: {},
+      projects: store.projects,
       categories: [
         'dev',
         'art',
@@ -20,37 +29,43 @@ class homeContainer extends Component {
         'motion',
         'arch',
       ],
-      colors: [],
+      colors: store.colors,
+      color: 'white',
     };
-
   }
 
-  componentDidMount() {
-    axios.get('/elements.json')
-    .then((res) => {
-      const projects = res.data.projects;
-      const categories = projects.map(project => project.type);
-      const colors = projects.map(project => project.color);
-      this.setState({
-        projects,
-        // categories,
-        colors,
-      });
-    });
+
+  setColor(color) {
+    // return () => {
+    //   this.setState({
+    //     color,
+    //   });
+    // };
   }
 
   render() {
+    const {projects, categories, colors, color} = this.state;
+
+    // TODO: main cannot rerender the entire page when the color changes
     return (
-      <div>
-        <h1>o'toole.<br />media</h1>
-        <div className={styles.categories} >
-          {this.state.categories.map((cat) => {
-            return (
-              <div key={cat} className={styles.category}>{cat}</div>
-            );
-          })}
-        </div>
-      </div>
+      <main className={styles[color]}>
+        <Header onHover={() => this.setColor('bg-gray')} />
+        <article className={styles['xl-container']}>
+          <ProjectCard projectName={'Little Things'} onHover={() => this.setColor('yellow')}>
+            <CardLittleThings />
+          </ProjectCard>
+          <ProjectCard projectName={'Pair.it'} onHover={() => this.setColor('lime')}>
+            <CardPairIt />
+          </ProjectCard>
+          <ProjectCard projectName={'Essential Three.js'} onHover={() => this.setColor('red')}>
+            <CardThreeTalk />
+          </ProjectCard>
+          <ProjectCard projectName={'Renderings and Drawings'} onHover={() => this.setColor('orange')}>
+            <CardPairIt />
+          </ProjectCard>
+        </article>
+        <Footer />
+      </main>
     );
   }
 }
