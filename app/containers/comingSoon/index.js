@@ -22,9 +22,9 @@ class comingSoonContainer extends Component {
     return (
       <main className={styles['near-black']}>
         <Header />
-        <Lottie
-          options={defaultOptions}
-        />
+          <Lottie
+            options={defaultOptions}
+          />
       </main>
     );
   }

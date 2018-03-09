@@ -1,5 +1,6 @@
 @import url("https://use.typekit.net/lov3zvv.css");
 @import '~theme/colors';
+@import '~theme/spacing';
 
 *{
   box-sizing: border-box;
@@ -14,12 +15,22 @@ body {
 
 
 h1 {
-  font-size: 44px;
-  font-weight: 100;
-  margin: 0px;
-  // text-transform: uppercase;
-  color: $white;
-  letter-spacing: 5px;
+  // @include breakpoint(desktop){
+    font-size: 44px;
+    font-weight: 100;
+    margin: 0px;
+    // text-transform: uppercase;
+    color: $white;
+    letter-spacing: 5px;
+  // }
+  @include breakpoint(mobile){
+    font-size: 44px;
+    font-weight: 100;
+    margin: 0px;
+    // text-transform: uppercase;
+    color: $white;
+    letter-spacing: 5px;
+  }
 }
 
 h2{

@@ -1,15 +1,28 @@
 // break points for measuring and sizing
 
-$s: 150px;
-$m: 500px;
-$l: 850px;
-$xl: 1200px;
+$s: 450px;
+$m: 850px;
+$l: 1200px;
+$xl: 1800px;
 
-.xl-container{
-  width: 100%;
-  max-width: $xl;
-  min-width: $l;
-  display: flex;
-  flex-direction: column;
-  padding: 0px 15px;
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: $xl) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: $l) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: $m) { @content ; }
+  }
+   @else if $point == mobile {
+     @media (min-width: $s)  { @content ; }
+  }
+  @else if $point == mobileOnly {
+     @media (max-width: $s)  { @content ; }
+  }
 }
