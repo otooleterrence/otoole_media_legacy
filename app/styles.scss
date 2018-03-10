@@ -15,7 +15,6 @@ body {
 
 
 h1 {
-  // @include breakpoint(desktop){
     font-size: 44px;
     font-weight: 100;
     margin: 0px;
@@ -27,7 +26,6 @@ h1 {
     font-size: 44px;
     font-weight: 100;
     margin: 0px;
-    // text-transform: uppercase;
     color: $white;
     letter-spacing: 5px;
   }
