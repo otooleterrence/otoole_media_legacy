@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 // import Lottie from 'react-lottie';
 // import { Helmet } from 'react-helmet';
 // import * as animationData from 'store/logo1.json';
-import Header from '../../components/Header';
+import Header from 'components/Header';
+import './styles.css';
 
-import styles from './styles.scss';
 
 class comingSoonContainer extends Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     // const defaultOptions = {
@@ -21,7 +17,7 @@ class comingSoonContainer extends Component {
     // };
 
     return (
-      <main className={styles['near-black']}>
+      <main className='mainContainer'>
         {/* <Helmet
           title="Coming Soon"
           meta={[

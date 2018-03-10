@@ -1,0 +1,53 @@
+@import 'theme/colors.scss';
+@import 'theme/spacing.scss';
+
+.header {
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 15px;
+  display: flex;
+  color: $white;
+  height: 100px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  @include breakpoint(tablet){
+    align-items: center;
+    flex-direction: row;
+    padding: 0px 15px;
+    display: flex;
+    color: $white;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
+.links{
+  color: $white;
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.container{
+  align-items: center;
+  width: 100%;
+  max-width: $xl;
+  margin: 0px auto;
+  justify-content: space-between;
+  display: flex;
+}
+
+.image{
+  height: 30px;
+  width: 30px;
+  fill: $white;
+  margin-left: 15px;
+}
+
+.mailLink{
+  color: $white;
+  font-size: 44px;
+  font-weight: 100;
+}

@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <Router history={history}>
-      {/* <Router > */}
+        {/* <Router > */}
         <Switch>
           <Route exact path="/coming-soon" component={comingSoon} />
           <Redirect to="/coming-soon" />

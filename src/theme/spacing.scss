@@ -1,0 +1,28 @@
+// break points for measuring and sizing
+
+$s: 450px;
+$m: 850px;
+$l: 1200px;
+$xl: 1800px;
+
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: $xl) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: $l) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: $m) { @content ; }
+  }
+   @else if $point == mobile {
+     @media (min-width: $s)  { @content ; }
+  }
+  @else if $point == mobileOnly {
+     @media (max-width: $s)  { @content ; }
+  }
+}
