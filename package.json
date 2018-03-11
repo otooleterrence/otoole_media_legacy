@@ -1,5 +1,7 @@
 {
-  "name": "otoole_media_clean",
+  "name": "otoole_media",
+  "author": "Terry O",
+  "description": "My own, personal, website. (to the tune of Personal Jesus)",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +15,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1"
   },
+  "homepage": "http://otoole.media",
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
