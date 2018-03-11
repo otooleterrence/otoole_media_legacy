@@ -38,9 +38,7 @@ class comingSoonContainer extends Component {
           ]}
         />
         <Header />
-        <Lottie
-          options={defaultOptions}
-        />
+        <Lottie options={defaultOptions} />
       </main>
     );
   }
