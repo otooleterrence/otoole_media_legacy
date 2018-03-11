@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
-// import Lottie from 'react-lottie';
-// import { Helmet } from 'react-helmet';
-// import * as animationData from 'store/logo1.json';
+import Lottie from 'react-lottie';
+import { Helmet } from 'react-helmet';
+import * as animationData from 'media/animations/logo1.json';
 import Header from 'components/Header';
 import './styles.css';
-
 
 class comingSoonContainer extends Component {
 
   render() {
-    // const defaultOptions = {
-    //   loop: true,
-    //   autoplay: true,
-    //   animationData: animationData,
-    //   rendererSettings: {}
-    // };
+    const defaultOptions = {
+      loop: true,
+      autoplay: true,
+      animationData: animationData,
+      rendererSettings: {}
+    };
 
     return (
       <main className='mainContainer'>
-        {/* <Helmet
+        <Helmet
           title="Coming Soon"
           meta={[
             { name: 'author', content: 'Terry' },
@@ -37,11 +36,11 @@ class comingSoonContainer extends Component {
             { property: 'og:image', content: 'http://www.otoole.media/images/preview.png' },
             { property: 'og:site_name', content: 'otoole media' },
           ]}
-        /> */}
+        />
         <Header />
-        {/* <Lottie
+        <Lottie
           options={defaultOptions}
-        /> */}
+        />
       </main>
     );
   }
