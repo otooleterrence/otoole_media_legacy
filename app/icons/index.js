@@ -1,7 +1,7 @@
-import pairIt from 'icons/Pairit.svg';
-import github from 'icons/github.svg';
-import linkedin from 'icons/linkedin.svg';
-import twitter from 'icons/Twitter.svg';
+import pairIt from './Pairit.svg';
+import github from './github.svg';
+import linkedin from './linkedin.svg';
+import twitter from './Twitter.svg';
 
 export default  {
   github,
